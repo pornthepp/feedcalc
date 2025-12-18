@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>รายการวัตถุดิบ</title>
+</head>
+<body>
+<h1>รายชื่อวัตถุดิบอาหารหมู</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ชื่อ</th>
+        <th>ราคา</th>
+        <th>คงเหลือ</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="m : ${items}">
+        <td th:text="${m.name}">ข้าวโพด</td>
+        <td th:text="${m.price}">10.5</td>
+        <td th:text="${m.stock}">100</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: feedcalc
+  DataSource:
+    url: jdbc:sqlite:feedcalc.db
+  main:
+    banner-mode: "off"
+logging:
+  level:
+    org:
+      hibernate: warn
