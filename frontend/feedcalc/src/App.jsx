@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { use, useState } from "react";
 function App() {
-  const name = "Bob";
-  const [age,setAge] =useState(30)
-
+  const [data, setData] = useState([
+    { empId: "001", name: "ram", age: 20 },
+    { empId: "002", name: "shyam", age: 21 },
+    { empId: "003", name: "hari", age: 22 },
+    { empId: "004", name: "sita", age: 23 },
+  ]);
+  const [show,setShow] = useState(true);
   return (
     <div>
-        <h1>Hello {name}</h1>
-        <p>age: {age} years old.</p>
-        <button onClick={()=>{setAge(age + 1 )}}> increase </button>
-        <button onClick={()=>{setAge(age - 1 )}}> decrease</button>
-        <button onClick ={() => {setAge(30)}}> reset </button>
+      <h1>Employee count: {data.length}</h1>
+      <button onClick={() => setShow(!show)}> {show ? "Hide":"Show"} </button>
 
+      <ul>
+        {show && data.map((item) => (
+          <li key={item.empId}> <h3> {item.name} age: {item.age}  </h3> </li>
+        ))}
+
+      </ul>
     </div>
   );
 }
