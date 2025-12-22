@@ -1,0 +1,76 @@
+.header{
+    gap: 5px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    
+    background-color:#f0f4f6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    align-items:normal;
+    
+}
+
+.banner{
+    flex: 1;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 15px;
+    align-items: center;
+
+}
+.logo{
+    display:flex;
+
+    width: 48px;
+    justify-self: center;
+    position: relative;
+    top: -5px;
+    left: 10px; 
+}
+.banner-grp{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.header-title {
+    margin: 0;
+    font-size: 1.2rem; 
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1; 
+    margin-top:0px;
+    margin-left: 5px;
+}
+.header-description {
+    margin: 0;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 2px; /* ขยับห่างจาก Title นิดเดียวพอ */
+    margin-left: 5px;
+}
+.button-grp {
+    margin:0;
+    display:flex;
+    margin-right: 30px;
+    justify-self: right;
+    gap:1px;
+    padding:5px;
+}
+.button-grp button{
+    border: none;
+    height: 50px;
+    background-color: transparent; 
+    color: #4f46e5;   
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5);
+    transition: 300ms;
+ 
+
+    
+}
+.button-grp button:hover{
+    cursor: pointer;
+
+    border-bottom:5px solid 	#afcbf6;  
+    color: rgba(0, 0, 0, 0.5);
+}

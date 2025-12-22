@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="" />
+    <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/MaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/src/main.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +25,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -42,6 +53,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Java_basic/feedcalc",
