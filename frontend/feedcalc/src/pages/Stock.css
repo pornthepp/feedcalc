@@ -1,0 +1,13 @@
+.header-bar{
+    display: flex;
+    justify-content: space-between;
+    margin-left:20vh ;
+    margin-right:25vh ;
+    align-items: center;
+
+}
+.header-bar .add-material .img-button {
+    font-size: 32px;
+    margin-top: 2.5vh;
+
+}

@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
-html, body {
+:root {
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+html, body, select{
   height: 100%;
   margin: 0;
-  background-color: #afcbf6; 
-  font-family: 'Noto Sans Thai', sans-serif;
+  background-color: #f0f4f6; 
   overflow: hidden;
 }
 img {
-  pointer-events: none;   /* ปิดการคลิก */
-  user-drag: none;        /* สำหรับบาง browser */
-  -webkit-user-drag: none; /* Safari/Chrome */
+  pointer-events: none;   
+  -webkit-user-drag: none; 
+}
+
+select option{ 
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+select { 
+  font-family: 'Noto Sans Thai', sans-serif;
 }
