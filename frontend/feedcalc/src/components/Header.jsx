@@ -11,9 +11,9 @@ function Header(){
                     <h4 className="header-description">โปรแกรมคำนวณสูตรอาหารสุกร - จัดการวัตถุดิบ</h4>
                 </div>
                 <div className="button-grp">
-                    <button><FaCalculator/>{' '}Material Calculate</button>
-                    <button><FaBoxes/>{' '}Stock Management</button>
-                    <button><MdOutlineHistory/>{' '}History</button>
+                    <button><FaCalculator/>{' '}คำนวณสูตรอาหาร</button>
+                    <button><FaBoxes/>{' '}จัดการวัตถุดิบ</button>
+                    <button><MdOutlineHistory/>{' '}ประวัติการผลิต</button>
                 </div>
             </div>
         </div>
