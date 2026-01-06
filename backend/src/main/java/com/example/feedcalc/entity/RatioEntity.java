@@ -1,5 +1,6 @@
 package com.example.feedcalc.entity;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +8,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@JsonPropertyOrder({"ratioId", "recipeId", "materialId", "amount", "price"})
 @Entity
+@Table(name="Ratio")
+
 public class RatioEntity {
     @Id
     @Column(name="RATIO_ID")

@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import Table from '../components/Table'
+import StockTable from '../components/StockTable'
 import SearchBox from '../components/SearchBox'
 import AddMaterial from '../components/AddMaterial'
 import "./Stock.css"
@@ -14,7 +14,7 @@ export default function Stock() {
             <SearchBox/> 
             <AddMaterial/>  
         </div>
-        <Table/>
+        <StockTable/>
     </div>
 
   )

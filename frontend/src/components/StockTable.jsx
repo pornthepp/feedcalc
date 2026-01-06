@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import { useReactTable, getCoreRowModel, flexRender, createColumnHelper } from '@tanstack/react-table'
-import './Table.css'
+import './StockTable.css'
 
-export default function Table() {
+export default function StockTable() {
   // 1. เตรียมข้อมูล
   const data = useMemo(() => [
     { id: 1001 ,name: 'แป้งสาลี', stock: 100, price:'500'},

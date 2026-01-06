@@ -9,7 +9,6 @@ const options = [
 ]
 
 export default function AddModal({isOpen,onClose}) {
-    console.log(isOpen)
      if (!isOpen) return null;
     const [selectedOption, setSelectedOption] = useState(null);
 

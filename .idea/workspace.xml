@@ -5,11 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SearchBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/feedcalc/src/components/SearchBox.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RatioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/repository/RatioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/RatioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/feedcalc.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/feedcalc.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RecipeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/RatioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/RatioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.react-router/types/app/Pages/+types/Calculate.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.react-router/types/app/Pages/+types/History.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.react-router/types/app/Pages/+types/Stock.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/public/images/pig_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/assets/NotoSansThai.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/assets/Person.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddModal.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddModal.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Content.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Frame.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Frame.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SearchBox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SearchBox.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SimpleList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SimpleList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Table.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Calculate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Calculate.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/History.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Stock.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Stock.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/vite.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +64,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -38,30 +83,34 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="36n2mgJp6J7VwM1zjaK58eiK4P4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FeedcalcApplication.executor": "Run",
-    "Maven.feedcalc [clean].executor": "Run",
-    "Maven.feedcalc [compile].executor": "Run",
-    "Maven.feedcalc [org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java_basic/feedcalc",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FeedcalcApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.feedcalc [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.feedcalc [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.feedcalc [org.apache.maven.plugins:maven-clean-plugin:3.5.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java_basic/feedcalc&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java_basic\feedcalc\backend" />
