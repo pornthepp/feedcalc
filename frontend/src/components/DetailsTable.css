@@ -1,0 +1,38 @@
+.table-scroll{ 
+}
+.custom-table {
+    border-collapse: collapse; 
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    align-items: center;
+    overflow-x: auto; 
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+.custom-table thead th{
+  background: fixed rgb(255, 255, 255);
+    color: #555;
+}
+
+.custom-table th {
+    background-color: #333; 
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 14px;
+}
+.custom-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    font-size: 12px;
+
+}
+.custom-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.custom-table tr:hover {
+    background-color: #f1f5f9;
+}

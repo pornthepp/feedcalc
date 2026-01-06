@@ -1,14 +1,11 @@
 package com.example.feedcalc.dto;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-
+import lombok.Data;
 import java.math.BigDecimal;
 
-public interface RatioDetailsDto {
-    Long getRatioId();
-    Long getRecipeId();
-    Long getMaterialId();
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    BigDecimal getAmount();
-    String getMaterialName();
+@Data
+public class RatioDetailsDto {
+    Long ratioId;
+    Long RecipeId;
+    BigDecimal amount;
+    String materialName;
 }

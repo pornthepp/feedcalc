@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react';
 import "./RatioList.css"
 import { getRatioByRecipeId } from '../services/Service';
 
-export default function SimpleList(props) {
+export default function RatioList(props) {
   const [ratio,setRatio]=useState([]);
   const {recipeId, title} = props;
   useEffect(()=>{

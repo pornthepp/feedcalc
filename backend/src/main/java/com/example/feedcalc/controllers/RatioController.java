@@ -1,14 +1,13 @@
 package com.example.feedcalc.controllers;
 
 import com.example.feedcalc.dto.RatioDetailsDto;
+import com.example.feedcalc.dto.RatioDetailsProjection;
 import com.example.feedcalc.entity.RatioEntity;
 import com.example.feedcalc.services.RatioService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:5173")
@@ -24,7 +23,8 @@ public class RatioController {
         return ResponseEntity.ok(service.getAll());
     }
     @GetMapping("/ratios/byRecipeId/{recipeId}")
-    public ResponseEntity <List<RatioDetailsDto>> getByRecipeId(@PathVariable Long recipeId) {
-        return ResponseEntity.ok(service.getRatioByRecipeId(recipeId));
+    public ResponseEntity <List<RatioDetailsDto>> getByRecipeId(@PathVariable Long recipeId,
+                                                                @RequestParam(defaultValue = "1") BigDecimal amount) {
+        return ResponseEntity.ok(service.getRatioByRecipeId(recipeId,amount));
     }
 }

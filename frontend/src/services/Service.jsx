@@ -35,26 +35,15 @@ export const getRatioByRecipeId = async (id) => {
         return [];
     }
 }
-//ดึง ratio 100% มาคำนวณตามจำนวณน้ำหนักที่ต้องการผลิต
-export const getCalRatio = async (props) => {
+
+export const getCalRatio = async (recipeId,processAmount) => {
     try{
-      const [id,amount] = props
-      const [ratio,setRatio]=useState([]);
-      useEffect(()=>{
-          const loadData = async()=>{
-              const data = await getRatioByRecipeId(id);  // <= เรียก fn
-              //setState
-              setRatio(data);
-        };
-      loadData();
+      const response = await axios.get(`http://localhost:8080/ratios/byRecipeId/${recipeId}`,{
+        params:{amount:processAmount}
       });
-      console.log("test"+ratio)
-
-
+      return response.data;
     }catch (error){
         console.error("Error fetching ratio:", error);
         return [];
     }
-
-
 }

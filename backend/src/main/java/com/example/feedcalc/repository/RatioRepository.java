@@ -1,6 +1,6 @@
 package com.example.feedcalc.repository;
 
-import com.example.feedcalc.dto.RatioDetailsDto;
+import com.example.feedcalc.dto.RatioDetailsProjection;
 import com.example.feedcalc.entity.RatioEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -22,5 +22,5 @@ public interface RatioRepository extends JpaRepository<RatioEntity, Long> {
             "JOIN MATERIALS m ON r.material_id = m.material_id "+
             "WHERE r.recipe_id = :recipeId",
             nativeQuery = true)
-    List<RatioDetailsDto> findByRecipeIdWithMaterialName(Long recipeId);
+    List<RatioDetailsProjection> findByRecipeIdWithMaterialName(Long recipeId);
 }

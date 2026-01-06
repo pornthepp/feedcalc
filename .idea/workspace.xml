@@ -5,56 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RatioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/repository/RatioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/RatioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsProjection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/feedcalc.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/feedcalc.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RecipeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/RatioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/RatioEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.react-router/types/app/Pages/+types/Calculate.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.react-router/types/app/Pages/+types/History.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/.react-router/types/app/Pages/+types/Stock.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/eslint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/public/images/pig_128.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/assets/NotoSansThai.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/assets/Person.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddMaterial.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddModal.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/AddModal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Content.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Content.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Frame.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Frame.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SearchBox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SearchBox.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SimpleList.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/SimpleList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Table.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/components/Table.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/main.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Calculate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Calculate.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/History.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Stock.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/src/pages/Stock.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/feedcalc/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RatioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RatioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/repository/RatioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/repository/RatioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/RatioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/RatioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CalContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CalContent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RatioList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RatioList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UsingMaterialDetails.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/services/Service.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/Service.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>

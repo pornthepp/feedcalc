@@ -4,7 +4,7 @@ import Frame from './Frame.jsx';
 import RatioList from './RatioList.jsx';
 import {getAllRecipe ,getCalRatio} from '../services/Service.jsx'
 import { useState,useEffect } from 'react';
-import DetailsTable from './UsingMaterialDetails.jsx';
+import DetailsTable from './DetailsTable.jsx';
 
 export default function CalContent(){
     const [recipes,setRecipe]=useState([]);
@@ -17,8 +17,9 @@ export default function CalContent(){
             setRecipe(data);
         };
         loadData(); //<= เรียก fn loadData ที่เขียนไว้ด้านบน
-    },[]); // ถ้าพังให้ส่ง array ว่างไปให้ option 
-
+    },[]); 
+    // console.log(selectedRecipes);
+    // console.log(inputAmount);
     return(
         <div className="content">
             <div className="title-container">
@@ -32,8 +33,9 @@ export default function CalContent(){
                          {recipes.map((recipe)=>( <option key={recipe.recipeId} value={recipe.recipeId}>สูตรที่ {recipe.recipeId} {recipe.recipeName}</option>))}
                     </select>
                     <p className='title'>จำนวณการผลิต (กก.)</p>
-                    
-                    <input defaultValue={inputAmount} className='inputAmount' type='number'></input>
+                    <input type='number'value={inputAmount} onChange={(e) => {
+                            const val = e.target.value;
+                            if (val.length <= 5) {setInputAmount(val);}}}className='inputAmount'/>
                     <p className='title'>อัตราส่วนผสม 100%</p>
                     <p className='underLine'></p> 
                     <RatioList recipeId={selectedRecipes} className="simple-list"/>
@@ -45,7 +47,8 @@ export default function CalContent(){
                     </Frame>
                     <Frame className="details-frame">
                         <p className='title'>รายละเอียดการใช้วัตถุดิบ</p>
-                        <DetailsTable/>
+                        <DetailsTable recipeId ={selectedRecipes} processAmount={inputAmount}/>
+                    
                     </Frame>
                 </div>
             </div>
