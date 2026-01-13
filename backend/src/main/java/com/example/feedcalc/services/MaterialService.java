@@ -4,6 +4,7 @@ import com.example.feedcalc.repository.MaterialsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 @Service
 public class MaterialService {
@@ -22,7 +23,7 @@ public class MaterialService {
         return repo.findById(id).orElse(null);
     }
     //Update Data------------------------------------// Type of data
-    public MaterialsEntity updateMaterialStock(Long id,Double stock ){
+    public MaterialsEntity updateMaterialStock(Long id, BigDecimal stock ){
             //get existing data from database to "existingdata"
             MaterialsEntity existingdata = repo.findById(id).orElse(null);
             if(existingdata != null){
@@ -33,7 +34,7 @@ public class MaterialService {
                 return null;
             }
     }
-    public MaterialsEntity updateMaterialPrice(Long id,Double price){
+    public MaterialsEntity updateMaterialPrice(Long id,BigDecimal price){
         //get existing data from database to "existingdata"
         MaterialsEntity existingdata = repo.findById(id).orElse(null);
         if(existingdata != null){

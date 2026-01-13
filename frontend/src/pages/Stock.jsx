@@ -10,12 +10,18 @@ export default function Stock() {
   return (
     <div>
         <Header page="stock"/>
-        <div className='header-bar'>
-            <SearchBox/> 
-            <AddMaterial/>  
+        <div className='stock-body-container'>
+            <div className='stock-body-wrap'>
+                <div className='stock-header-bar'>
+                    <SearchBox/> 
+                    <AddMaterial/>  
+                </div>
+                <div className='stock-table-wrap'>
+                    <StockTable/>
+                </div>
+            </div>
         </div>
-        <StockTable/>
-    </div>
+  </div>
 
   )
 }

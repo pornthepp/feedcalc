@@ -5,6 +5,7 @@ import com.example.feedcalc.services.MaterialService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 @CrossOrigin(origins = "http://localhost:5173")
@@ -32,9 +33,9 @@ public class MaterialController {
     public ResponseEntity <MaterialsEntity> updateStock(
             @PathVariable Long id,
             //รับ json body  {"key":"value"}
-            @RequestBody Map<String,Double> materialStock){
+            @RequestBody Map<String,BigDecimal> materialStock){
         //-------------------------------->Key from json
-        Double stock = materialStock.get("materialStock");
+        BigDecimal stock = materialStock.get("materialStock");
         return ResponseEntity.ok(service.updateMaterialStock(id,stock));
     }
     //set Material Price
@@ -42,9 +43,9 @@ public class MaterialController {
     public ResponseEntity <MaterialsEntity> updatePrice(
             @PathVariable Long id,
             //รับ json body  {"key":"value"}
-            @RequestBody Map<String,Double> materialPrice){
+            @RequestBody Map<String,BigDecimal> materialPrice){
         //-------------------------------->Key from json
-        Double price = materialPrice.get("materialPrice");
+        BigDecimal price = materialPrice.get("materialPrice");
         return ResponseEntity.ok(service.updateMaterialPrice(id,price));
     }
 }

@@ -5,16 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsProjection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/feedcalc.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/feedcalc.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/MaterialController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RatioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/controllers/RatioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsProjection.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/dto/RatioDetailsProjection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/MaterialsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/MaterialsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/repository/RatioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/repository/RatioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/MaterialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/MaterialService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/RatioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/services/RatioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/CalContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CalContent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DetailsTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DetailsTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/DetailsTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/DetailsTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Frame.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Frame.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/RatioList.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RatioList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/RatioList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/RatioList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UsingMaterialDetails.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StockTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StockTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StockTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StockTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Stock.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Stock.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Stock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Stock.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/services/Service.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/Service.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +81,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.android.studio.ml.bot.mainConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -118,5 +130,16 @@
       <updated>1765628175162</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

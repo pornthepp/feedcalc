@@ -11,3 +11,25 @@
     margin-top: 2.5vh;
 
 }
+.stock-body-container{
+    display: flex;
+    justify-content: center;
+}
+.stock-body-wrap{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width:780px;
+}
+.stock-header-bar{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 /span2;
+    grid-row: 1;
+}
+.stock-table-wrap{
+    display: flex;
+    justify-content: center;
+    grid-column: 1 /span2;
+    grid-row: 2;
+
+}

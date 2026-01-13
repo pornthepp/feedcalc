@@ -20,7 +20,7 @@ export default function RatioList(props) {
         {ratio.map((item) => 
             <li key={item.ratioId}>
               <span className="mat-name">{item.materialName}</span>
-             <span className="mat-amount">{item.amount} %</span>
+             <span className="mat-amount">{item.materialUse} %</span>
             </li>
         )}
       </ul>

@@ -35,15 +35,30 @@ export const getRatioByRecipeId = async (id) => {
         return [];
     }
 }
-
-export const getCalRatio = async (recipeId,processAmount) => {
+//ดึงจำนวนที่ผลิตได้เต็มที่ จาก recipeId
+export const minManufacture = async (recipeId) => {
     try{
-      const response = await axios.get(`http://localhost:8080/ratios/byRecipeId/${recipeId}`,{
-        params:{amount:processAmount}
-      });
+      const response = await axios.get(`http://localhost:8080/ratios/max/${recipeId}`);
       return response.data;
     }catch (error){
-        console.error("Error fetching ratio:", error);
+       console.error("Error fetching ratio:", error);
         return [];
     }
+}
+export const getCalRatio = async (recipeId,inputAmount) => {
+  try {
+    const response = await axios.get(`http://localhost:8080/ratios/byRecipeId/${recipeId}`,{params:{inputAmount}});
+    return response.data;
+  }catch(error){console.error("Error fetching ratio:", error);
+    return [];
+  }
+}
+
+export const getTotalPrice = async (recipeId,inputAmount) => {
+  try{
+    const response = await axios.get(`http://localhost:8080/ratios/cost/byRecipeId/${recipeId}`,{params:{inputAmount}});
+    return response.data;
+    }catch(error){console.error("Error fetching ratio:", error);
+      return [];
+  }
 }

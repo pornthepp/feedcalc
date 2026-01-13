@@ -4,6 +4,7 @@ import com.example.feedcalc.dto.RatioDetailsDto;
 import com.example.feedcalc.dto.RatioDetailsProjection;
 import com.example.feedcalc.entity.RatioEntity;
 import com.example.feedcalc.services.RatioService;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,17 @@ public class RatioController {
     }
     @GetMapping("/ratios/byRecipeId/{recipeId}")
     public ResponseEntity <List<RatioDetailsDto>> getByRecipeId(@PathVariable Long recipeId,
-                                                                @RequestParam(defaultValue = "1") BigDecimal amount) {
-        return ResponseEntity.ok(service.getRatioByRecipeId(recipeId,amount));
+                                                                @RequestParam(defaultValue = "0")BigDecimal inputAmount) {
+        return ResponseEntity.ok(service.getRatioByRecipeId(recipeId,inputAmount));
+    }
+    //get total costprice by RecipeId and Manufacture value
+    @GetMapping("/ratios/cost/byRecipeId/{recipeId}")
+    public BigDecimal getCost(@PathVariable Long recipeId,
+                              @RequestParam(defaultValue = "0") BigDecimal inputAmount){
+        return service.getTotalCost(recipeId,inputAmount);
+    }
+    @GetMapping("ratios/max/{recipeId}")
+    public  ResponseEntity getMaxManufacture (@PathVariable Long recipeId){
+        return ResponseEntity.ok(service.getMaxManufacture(recipeId));
     }
 }

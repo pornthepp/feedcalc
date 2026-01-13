@@ -11,6 +11,7 @@ import {getCalRatio} from "../services/Service.jsx"
 export default function DetailsTable(props) {
   const {recipeId, processAmount}=props
   const [calRatio,setCalRatio] = useState([])
+  
   useEffect(()=>{
     const loadData = async()=>{
       if (!recipeId) return;
@@ -25,9 +26,8 @@ export default function DetailsTable(props) {
   },[recipeId, processAmount])
 
 return(
-  <div className="table-scroll">
-  <table className="custom-table">
-    <thead>
+  <table className="details-table" >
+    <thead >
       <tr>
         <th>วัตถุดิบ</th>
         <th>ปริมาณที่ใช้ (กก.)</th>
@@ -35,18 +35,18 @@ return(
         <th>สถานะ</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody > 
       {calRatio.map((item, index) => (
         <tr key={index}>
           <td>{item.materialName}</td>
-          <td>{item.amount}</td>
-          <td>{item.stock}</td>
-          <td>{item.status}</td>
+          <td>{item.materialUse}</td>
+          <td>{item.materialStock}</td>
+          <td className={item.status==='พร้อม' ? 'status-green':'status-red'}>
+            {item.status}
+          </td>
         </tr>
+                
       ))}
     </tbody>
   </table>
-  </div>
-);
-
-}
+);}

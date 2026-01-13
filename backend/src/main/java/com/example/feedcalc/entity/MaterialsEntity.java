@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Entity
@@ -17,9 +19,9 @@ public class MaterialsEntity {
     @Column(name = "MATERIAL_NAME")
     private String materialName;
     @Column(name = "MATERIAL_STOCK")
-    private double materialStock;
+    private BigDecimal materialStock;
     @Column(name = "MATERIAL_PRICE")
-    private double materialPrice;
+    private BigDecimal materialPrice;
 
     //Constructor
     public MaterialsEntity() {}
