@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/Service.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/Service.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="a82d1ef6-d322-4af7-9b8f-174868f6b1c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

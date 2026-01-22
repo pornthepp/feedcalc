@@ -8,9 +8,13 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // ครอบคลุมทุก endpoint
-                .allowedOrigins("https://feedcalc.netlify.app") // อนุญาต origin ของ frontend
-                .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS") // รวม OPTIONS ด้วย
-                .allowedHeaders("*"); // อนุญาตทุก header
+        registry.addMapping("/**") // อนุญาตทุก Path ใน API
+                .allowedOrigins(
+                        "http://localhost:5173",          // สำหรับตอนรันในเครื่อง (Vite)
+                        "https://your-site.netlify.app"   // สำหรับตอนรันจริงบน Netlify
+                )
+                .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS") // อนุญาตทุก Method
+                .allowedHeaders("*")
+                .allowCredentials(true);
     }
 }
