@@ -9,3 +9,5 @@ logging:
   level:
     org:
       hibernate: warn
+server:
+  port=${PORT:8080}:
