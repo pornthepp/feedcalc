@@ -1,4 +1,3 @@
-
 import "./CalContent.css";
 import Frame from "./Frame.jsx";
 import RatioList from "./RatioList.jsx";
@@ -11,7 +10,7 @@ import UniversalModal from "./UniversalModal.jsx";
 export default function CalContent(){
     const [recipes,setRecipe]=useState([]);
     const [selectedRecipes,setSelectedRecipes]=useState(5);
-    const recipeName = recipes.find((item)=>Number(item.recipeId) ===Number (selectedRecipes));
+    const recipeName = recipes?.find((item) => Number(item.recipeId) === Number(selectedRecipes));
     const [minManuf,setMinManuf]=useState(0);
     const [inputAmount,setInputAmount]=useState(100);
     const [totalPrice,setTotalPrice]=useState(0);

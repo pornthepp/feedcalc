@@ -2,14 +2,14 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 
-const api = axios.create({
-  baseURL: "http://localhost:8080",
-  timeout: 5000,
+const baseApi = axios.create({
+  baseURL: import.meta.env.VITE_API_URL||"http://localhost:8080",
+  timeout: 15000,
 });
 
 const handleApiError = (error) => {
   if (error.message === "Network Error") {
-    console.warn("ไม่สามารถติดต่อฐานข้อมูลได้");
+    console.warn("ไม่สามารถติดต่อฐานข้อมูลได้ (อาจจะกำลัง Boot ระบบอยู่)");
   } else {
     console.error(error.message);
   }
@@ -19,7 +19,7 @@ const handleApiError = (error) => {
 
 export const getAllRecipe = async () => {
   try {
-    const response = await axios.get("http://localhost:8080/recipes");
+    const response = await baseApi.get("/recipes");
     return response.data;
   }catch (error)  {
     handleApiError(error)
@@ -29,7 +29,7 @@ export const getAllRecipe = async () => {
 
 export const getAllMaterial = async () => {
   try {
-    const response = await axios.get("http://localhost:8080/materials");
+    const response = await  baseApi.get("/materials");
     return response.data;
   } catch (error)  {
     handleApiError(error)
@@ -40,7 +40,7 @@ export const getAllMaterial = async () => {
 export const getMaterialById = async (id) => {
   try {
     if (id){
-      const response = await axios.get(`http://localhost:8080/materials/${id}`);
+      const response = await  baseApi.get(`/materials/${id}`);
       return response.data;
     }
   }catch (error)  {
@@ -54,7 +54,7 @@ export const getRatioByRecipeId = async (id) => {
     // ถ้าไม่มี id ให้ return ค่าว่าง
     if (!id || id === "") return []; 
     try {
-        const response = await axios.get(`http://localhost:8080/ratios/byRecipeId/${id}`);
+        const response = await  baseApi.get(`/ratios/byRecipeId/${id}`);
         return response.data;
     }catch (error)  {
       handleApiError(error)
@@ -64,7 +64,7 @@ export const getRatioByRecipeId = async (id) => {
 //ดึงจำนวนที่ผลิตได้เต็มที่ จาก recipeId
 export const minManufacture = async (recipeId) => {
     try{
-      const response = await axios.get(`http://localhost:8080/ratios/max/${recipeId}`);
+      const response = await  baseApi.get(`/ratios/max/${recipeId}`);
       return response.data;
     }catch (error)  {
       handleApiError(error)
@@ -73,7 +73,7 @@ export const minManufacture = async (recipeId) => {
 }
 export const getCalRatio = async (recipeId,inputAmount) => {
   try {
-    const response = await axios.get(`http://localhost:8080/ratios/byRecipeId/${recipeId}`,{params:{inputAmount}});
+    const response = await  baseApi.get(`/ratios/byRecipeId/${recipeId}`,{params:{inputAmount}});
     return response.data;
   }catch (error) {
     handleApiError(error)
@@ -83,7 +83,7 @@ export const getCalRatio = async (recipeId,inputAmount) => {
 
 export const getTotalPrice = async (recipeId,inputAmount) => {
   try{
-    const response = await axios.get(`http://localhost:8080/ratios/cost/byRecipeId/${recipeId}`,{params:{inputAmount}});
+    const response = await  baseApi.get(`/ratios/cost/byRecipeId/${recipeId}`,{params:{inputAmount}});
     return response.data;
   }catch (error) {
     handleApiError(error)
@@ -92,7 +92,7 @@ export const getTotalPrice = async (recipeId,inputAmount) => {
 }
 export const updateMaterialStock = async (materialId,updateStock) => {
   try{
-    const response = await axios.patch(`http://localhost:8080/materials/updateStock/${materialId}`,{materialStock:updateStock});
+    const response = await baseApi.patch(`/materials/updateStock/${materialId}`,{materialStock:updateStock});
     return response.data;
 
   }catch (error) {
@@ -102,7 +102,7 @@ export const updateMaterialStock = async (materialId,updateStock) => {
 }
 export const updateMaterialPrice = async (materialId,updatePrice) => {
   try{
-    const response = await axios.patch(`http://localhost:8080/materials/updatePrice/${materialId}`,{materialPrice:updatePrice});
+    const response = await baseApi.patch(`/materials/updatePrice/${materialId}`,{materialPrice:updatePrice});
     return response.data;
 
   }catch (error) {
@@ -117,7 +117,7 @@ export const updateMaterialStocks = async (materials)=>{
       materialStock: item.materialStock-item.materialUse
     }))
     console.warn(mapMaterials);
-    const response = await axios.patch(`http://localhost:8080/materials/updateStocks`,mapMaterials);
+    const response = await baseApi.patch(`/materials/updateStocks`,mapMaterials);
     return response.data;
 
   }catch (error){
@@ -146,7 +146,7 @@ export const updateMaterialStocks = async (materials)=>{
 //แสดงผล logs บนตาราง
 export const getAllLogs = async () => {
   try {
-    const response = await axios.get("http://localhost:8080/logs");
+    const response = await  baseApi.get("/logs");
     return response.data;
   } catch (error)  {
     handleApiError(error)
@@ -178,7 +178,7 @@ export const handleManufacture = async(logs)=>{
         //ส่ง requestBody โดยระบุในตรงกับ request ของ DTO
         const requestData = {stocks:requestMaterials,
                             logs:requestLogs}
-        const response = await axios.post(`http://localhost:8080/produce`,requestData);
+        const response = await baseApi.post(`/produce`,requestData);
         return response.data
   } catch (error)  {
     handleApiError(error)
