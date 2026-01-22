@@ -38,9 +38,9 @@ public class RatioService {
                 .collect(Collectors.toMap
                         (MaterialsEntity::getMaterialName,allMaterial->allMaterial));
 
-        //if inputAmount == null , totalAmount = 100 , if not totalAmount = inputAmount
-        BigDecimal totalAmount = inputAmount==null? new BigDecimal("100"):inputAmount;
-
+        //if inputAmount == null , totalAmount = 100 หรือ เทียบกับ 0 แล้ว เท่ากับ , if not totalAmount = inputAmount
+        BigDecimal totalAmount = inputAmount==null||inputAmount.compareTo(BigDecimal.ZERO)==0 ?
+                new BigDecimal("100"):inputAmount;
         //Loop เอาของจาก RatioDetailsProjection(p) ใส่ใน dto และคืนทั้งหมดเป็น list
         return projections.stream().map(p->{
             MaterialsEntity material = materialEntityMap.get(p.getMaterialName());
@@ -53,11 +53,14 @@ public class RatioService {
             dto.setMaterialStock(material.getMaterialStock());
             dto.setMaterialPrice(material.getMaterialPrice());
 
+
             BigDecimal calAmount = p.getMaterialUse()
                         .divide(new BigDecimal("100"))
                         .multiply(totalAmount)
                         .setScale(4, RoundingMode.HALF_UP);
             dto.setMaterialUse(calAmount);
+            BigDecimal calAvaibale = p.getMaterialAvailable().divide(totalAmount,4,RoundingMode.HALF_UP);
+            dto.setMaterialAvailable(calAvaibale);
             if (dto.getMaterialUse().compareTo(dto.getMaterialStock()) <= 0){
                 dto.setStatus("พร้อม");
             }else {
@@ -71,32 +74,15 @@ public class RatioService {
         BigDecimal hundressKg = new BigDecimal(100);
         List<RatioDetailsDto> getRatio = getRatioByRecipeId(recipeId,hundressKg);
         //min stock
-        RatioDetailsDto lessStock = getRatio.stream()
-                .min(Comparator.comparing(RatioDetailsDto::getMaterialStock)).orElse(null);
-        BigDecimal realMaterialUse = lessStock.getMaterialUse().divide(hundressKg);
-        BigDecimal minMaterialinStock = lessStock.getMaterialStock();
+        RatioDetailsDto rawAvailable = getRatio.stream()
+                .min(Comparator.comparing(RatioDetailsDto::getMaterialAvailable)).orElse(null);
+        BigDecimal maxManufacture = rawAvailable.getMaterialAvailable().multiply(new BigDecimal(100));
         //System.out.println("material in stock: "+lessStock.getMaterialStock());
         //System.out.println("materialUse(100kg): "+lessStock.getMaterialUse());
         //System.out.println("materialUse(1kg): "+lessStock.getMaterialUse().divide(hundressKg));
         //System.out.println("min material can use (kg): "+minMaterialinStock.divide(realMaterialUse,4,RoundingMode.HALF_UP));
-        BigDecimal getCalMaxManufac = minMaterialinStock.divide(realMaterialUse,4,RoundingMode.HALF_UP);
-        return getCalMaxManufac;
-    }
 
-   public BigDecimal getMaxManufacture2 (Long recipeId){
-        List<RatioDetailsProjection>ratio = repo.findByRecipeIdWithMaterialName(recipeId);
-        //record เปล่า
-        record Stock (BigDecimal amount,BigDecimal stock){
-        }
-        //สร้างตู้ไว้เก็บข้อมูลเพื่อเอาไปคำนวณต่อไป (materialId,materialStock)
-        Map<Long,Stock> ratioMap = ratio.stream()
-                .collect(Collectors.toMap
-                (RatioDetailsProjection::getMaterialId,
-                        item->new Stock(item.getMaterialUse(),item.getMaterialStock())));
-        BigDecimal minStock =ratioMap.values().stream().map(item->item.stock()
-                        .divide(item.stock,2)).min(BigDecimal::compareTo)
-                .orElse(BigDecimal.ZERO);
-        return minStock;
+        return maxManufacture;
     }
     public BigDecimal getTotalCost(Long recipeId,BigDecimal inputAmount ){
         BigDecimal rawTotal = repo.findTotalMaterialPrice(recipeId);

@@ -1,8 +1,16 @@
 import React from 'react'
-import Header from '../components/Header'
-
+import Header from '../components/Header.jsx'
+import"./History.css"
+import HistoryTable from '../components/HistoryTable.jsx'
 export default function History() {
   return (
-    <Header page="history"/>
+    <div>
+      <Header page="history"/>
+      <div className='history-body-container'>
+          <div className='history-body-wrap'>
+              <HistoryTable />
+          </div>
+      </div>
+    </div>
   )
 }

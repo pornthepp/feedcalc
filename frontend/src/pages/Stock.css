@@ -16,20 +16,80 @@
     justify-content: center;
 }
 .stock-body-wrap{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+    display: flex;
+    flex-direction: column;
     width:780px;
 }
 .stock-header-bar{
     display: flex;
-    justify-content: space-between;
-    grid-column: 1 /span2;
-    grid-row: 1;
+    justify-content: right;
+    margin: 10px 0px;
 }
 .stock-table-wrap{
     display: flex;
     justify-content: center;
     grid-column: 1 /span2;
     grid-row: 2;
+}
+.material-select-box{
+    width: 320px;
+    align-content: center;
+    margin: 0 auto;
+}
 
+.material-select__menu-list{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 14px;
+    margin: 1fr;
+
+}
+.material-select__option--is-focused {
+    background-color:  #33333328 !important; /* เปลี่ยนสีที่ต้องการตอนชี้ */
+    color: #333 !important;
+}
+
+/* 2. เมื่อกดเลือกไปแล้ว (Selected) */
+.material-select__option--is-selected {
+    background-color: #333   !important; /* สีตอนที่ถูกเลือกอยู่ */
+    color: white !important;
+}
+.add-material-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+    gap: 10px;
+}
+.add-material-input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    width: 165px;
+    padding-left: 20px;    
+}
+.update-material-content-input-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+
+}
+.update-material-input-box{
+    height: 30px;  
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 10px;
+    margin:15px 10px;  
+}
+.update-material-title{
+    border: none;
+}
+.update-material-input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+    width: 165px;
+    padding-left: 20px;   
 }

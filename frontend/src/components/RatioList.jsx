@@ -5,14 +5,21 @@ import { getRatioByRecipeId } from '../services/Service';
 export default function RatioList(props) {
   const [ratio,setRatio]=useState([]);
   const {recipeId, title} = props;
+
   useEffect(()=>{
       const loadData = async()=>{
-      const data = await getRatioByRecipeId(props.recipeId);  // <= เรียก fn
-      //setState
-      setRatio(data);
+        try{
+          const data = await getRatioByRecipeId(props.recipeId);  // <= เรียก fn
+          //setState
+          setRatio(data);
+        }catch(error){
+          console.log("error load data RadioList");
+          setRatio([]);
+        }
       };
       loadData();
   },[props.recipeId]);
+
   return (
     <div className="simple-list">
       {/* <h1 className='title'>{props.title}</h1> */}

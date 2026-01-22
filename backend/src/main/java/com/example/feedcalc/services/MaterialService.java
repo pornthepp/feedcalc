@@ -1,6 +1,7 @@
 package com.example.feedcalc.services;
 import com.example.feedcalc.entity.MaterialsEntity;
 import com.example.feedcalc.repository.MaterialsRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +35,22 @@ public class MaterialService {
                 return null;
             }
     }
+    //update หลาย material พร้อมกัน --------------------ลิสของรูปแบบถาดรับข้อมูล : materialEntity ให้ชื่อว่า update
+    @Transactional  //rowback when error
+    public List<MaterialsEntity> updateMaterialStocks(List<MaterialsEntity> updates) {
+        //สร้าง medthod เอาข้อมูลมาแจกแจงออกมา
+        List<MaterialsEntity> CollectiontoUpdate = updates.stream().map(collection -> {
+            //update ด้วย id (ข้อมูลรับเข้า)  --- ถ้าไม่เจอ id ใน database ให้ error
+            MaterialsEntity exiting = repo.findById(collection.getMaterialId())
+                            .orElseThrow(() -> new RuntimeException("no materialId found" + collection.getMaterialId()));
+            //set ค่า exiting (Entity)
+            exiting.setMaterialStock(collection.getMaterialStock());
+            //return exiting
+            return exiting;
+        }).toList();  //เก็บข้อมูล exiting แต่ละรอบไว้ใน List CollectiontoUpdate และ saveAll
+        return repo.saveAll(CollectiontoUpdate);
+    }
+
     public MaterialsEntity updateMaterialPrice(Long id,BigDecimal price){
         //get existing data from database to "existingdata"
         MaterialsEntity existingdata = repo.findById(id).orElse(null);

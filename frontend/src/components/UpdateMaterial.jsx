@@ -1,17 +1,17 @@
 import React ,{useState} from 'react'
 import "./updateMaterial.css"
-import AddModal from './AddModal.jsx';
+import UpdateModal from './UpdateModal.jsx';
 
 
 
-export default function AddMaterial({doRefresh}) {
+export default function UpdateMaterial({doRefresh}) {
   const [showModal,setShowModal] = useState(false)
   return (
     <div className='update-material'>
         <button className="img-button" onClick={() =>setShowModal(true)}>
-          <span className="tooltip">เติมวัตถุดิบ</span>
+          <span className="tooltip">แก้ไขสต็อก</span>
         </button>
-        <AddModal isOpen ={showModal} onClose={()=>setShowModal(false)} doRefresh={doRefresh} />
+        <UpdateModal isOpen ={showModal} onClose={()=>setShowModal(false)} doRefresh={doRefresh} />
 
     </div>
 

@@ -1,0 +1,74 @@
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-8px); }
+  100% { transform: translateX(0); }
+}
+.shake-animation {
+  animation: shake 0.4s ease-in-out;
+  border: 1px solid red !important; /* แถม: ใส่ขอบแดงให้รู้ว่ามีจุดผิด */
+}
+
+.universal-modal-overlay{
+    position: fixed;
+    background-color: #3333334b;
+    backdrop-filter: blur(1px);
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.universal-modal-content{
+    background-color: #ffffff;
+    width: 500px;
+    min-height: 290px;  
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.universal-modal-header{
+    background-color: #333;
+    height: 60px;  
+    display: flex;
+    flex-direction: column;
+}
+.universal-modal-header h3{
+    color: #ffffff;
+    transform: translateX(20px);
+}
+.universal-modal-body{
+    flex-grow:4;
+    width: 100%;
+    min-height: 60px;  
+    
+}
+.universal-modal-body-content{
+    align-items: center;
+    transform: translateY(15px);
+    margin: 20px;
+    text-align: center;
+}
+.universal-modal-footer{
+    width: 100%;
+    height: 60px;  
+    display: flex;
+    justify-content: center;
+}
+.universal-modal-footer-button{
+    transform: translateY(-15px);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}

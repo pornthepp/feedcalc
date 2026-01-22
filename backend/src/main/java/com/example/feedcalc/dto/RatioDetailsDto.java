@@ -11,5 +11,6 @@ public class RatioDetailsDto {
     BigDecimal materialUse;
     BigDecimal materialStock;
     BigDecimal materialPrice;
+    BigDecimal materialAvailable;
     String status;
 }

@@ -4,7 +4,7 @@ import './StockTable.css'
 import {getAllMaterial} from '../services/Service.jsx'
 
 
-export default function StockTable() {
+export default function StockTable({doRefresh}) {
   const [materials,setMaterials]=useState([]);
   
     useEffect(()=>{
@@ -17,8 +17,7 @@ export default function StockTable() {
       }
     };
   loadData();
-  },[null])
-
+  },[null,doRefresh])
 return(
   <table className="stock-table" >
     <thead >

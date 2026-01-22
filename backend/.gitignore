@@ -18,7 +18,8 @@ Backend/.idea
 *.iws
 *.iml
 *.ipr
-
+### Database ###
+*.db
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

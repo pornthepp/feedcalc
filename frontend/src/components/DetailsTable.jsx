@@ -8,8 +8,9 @@ import {
 import "./DetailsTable.css";
 import {getCalRatio} from "../services/Service.jsx"
 
-export default function DetailsTable(props) {
-  const {recipeId, processAmount}=props
+export default function DetailsTable(props ) {
+  
+  const {doRefresh,recipeId, processAmount}=props
   const [calRatio,setCalRatio] = useState([])
   
   useEffect(()=>{
@@ -23,7 +24,8 @@ export default function DetailsTable(props) {
       }
     };
   loadData();
-  },[recipeId, processAmount])
+  
+  },[recipeId, processAmount,doRefresh])
 
 return(
   <table className="details-table" >

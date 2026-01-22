@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 public class MaterialController {
     //รับ service เข้ามา
@@ -18,6 +17,7 @@ public class MaterialController {
     public MaterialController(MaterialService service){
         this.service=service;
     }
+
     //getAll
     @GetMapping("/materials")
     public ResponseEntity<List<MaterialsEntity>>getAll(){
@@ -38,6 +38,13 @@ public class MaterialController {
         BigDecimal stock = materialStock.get("materialStock");
         return ResponseEntity.ok(service.updateMaterialStock(id,stock));
     }
+    //setMultiple Material Stock (List)
+    @PatchMapping("/materials/updateStocks")
+    public ResponseEntity <List<MaterialsEntity>> updateStocks(
+            @RequestBody List<MaterialsEntity> materialStocks){
+        return ResponseEntity.ok(service.updateMaterialStocks(materialStocks));
+    }
+
     //set Material Price
     @PatchMapping("/materials/updatePrice/{id}")
     public ResponseEntity <MaterialsEntity> updatePrice(

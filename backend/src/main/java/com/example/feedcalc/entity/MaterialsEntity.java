@@ -15,7 +15,7 @@ public class MaterialsEntity {
     @Id
     @Column(name = "MATERIAL_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int materialId;
+    private Long materialId;
     @Column(name = "MATERIAL_NAME")
     private String materialName;
     @Column(name = "MATERIAL_STOCK")

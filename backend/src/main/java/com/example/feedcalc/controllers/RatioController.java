@@ -2,7 +2,9 @@ package com.example.feedcalc.controllers;
 
 import com.example.feedcalc.dto.RatioDetailsDto;
 import com.example.feedcalc.dto.RatioDetailsProjection;
+import com.example.feedcalc.entity.MaterialsEntity;
 import com.example.feedcalc.entity.RatioEntity;
+import com.example.feedcalc.services.MaterialService;
 import com.example.feedcalc.services.RatioService;
 import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -24,18 +28,18 @@ public class RatioController {
         return ResponseEntity.ok(service.getAll());
     }
     @GetMapping("/ratios/byRecipeId/{recipeId}")
-    public ResponseEntity <List<RatioDetailsDto>> getByRecipeId(@PathVariable Long recipeId,
+    public ResponseEntity<List<RatioDetailsDto>> getByRecipeId(@PathVariable Long recipeId,
                                                                 @RequestParam(defaultValue = "0")BigDecimal inputAmount) {
         return ResponseEntity.ok(service.getRatioByRecipeId(recipeId,inputAmount));
     }
     //get total costprice by RecipeId and Manufacture value
     @GetMapping("/ratios/cost/byRecipeId/{recipeId}")
-    public BigDecimal getCost(@PathVariable Long recipeId,
+    public ResponseEntity<BigDecimal> getCost(@PathVariable Long recipeId,
                               @RequestParam(defaultValue = "0") BigDecimal inputAmount){
-        return service.getTotalCost(recipeId,inputAmount);
+        return ResponseEntity.ok(service.getTotalCost(recipeId,inputAmount));
     }
-    @GetMapping("ratios/max/{recipeId}")
-    public  ResponseEntity getMaxManufacture (@PathVariable Long recipeId){
+    @GetMapping("/ratios/max/{recipeId}")
+    public  ResponseEntity<BigDecimal> getMaxManufacture (@PathVariable Long recipeId){
         return ResponseEntity.ok(service.getMaxManufacture(recipeId));
     }
 }

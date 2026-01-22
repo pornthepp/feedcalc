@@ -7,5 +7,6 @@ public interface RatioDetailsProjection {
     Long getRatioId();
     BigDecimal getMaterialStock();
     BigDecimal getMaterialUse();
+    BigDecimal getMaterialAvailable();
     String getMaterialName();
 }

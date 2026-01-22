@@ -21,7 +21,8 @@ public interface RatioRepository extends JpaRepository<RatioEntity, Long> {
             "r.amount AS materialUse, " +
             "m.material_name AS materialName, " +
             "m.material_stock AS materialStock, " +
-            "m.material_price As materialPrice " +
+            "m.material_price As materialPrice, " +
+            "(m.material_stock/(r.amount/100)) As materialAvailable "+
             "FROM ratio r "+
             "INNER JOIN MATERIALS m ON r.material_id = m.material_id "+
             "WHERE r.recipe_id = :recipeId",
