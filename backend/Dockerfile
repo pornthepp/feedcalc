@@ -17,6 +17,7 @@ RUN ./mvnw dependency:go-offline
 
 # ก๊อปปี้โค้ดทั้งหมดเข้าไป
 COPY src ./src
+COPY feedcalc.db ./feedcalc.db
 
 # สั่ง Build โปรเจกต์เป็นไฟล์ .jar (ข้ามการรัน Test เพื่อความเร็ว)
 RUN ./mvnw clean package -DskipTests
