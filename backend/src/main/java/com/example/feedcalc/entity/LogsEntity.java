@@ -23,6 +23,8 @@ public class LogsEntity {
     private String batchId;
     @Column(name= "BATCH_AMOUNT")
     private BigDecimal batchAmount;
+    @Column(name= "BATCH_RECIPE")
+    private String batchRecipe;
     @Column(name="MATERIAL_NAME")
     private String materialName;
     @Column(name="USED_AMOUNT")

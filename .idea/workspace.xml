@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/backend/feedcalc.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/feedcalc.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/LogsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/feedcalc/entity/LogsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CalContent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HistoryTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/HistoryTable.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/HistoryTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/HistoryTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/services/Service.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/Service.jsx" afterDir="false" />
     </list>

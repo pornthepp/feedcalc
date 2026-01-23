@@ -37,8 +37,9 @@
       <table className="history-table" >
         <thead >
           <tr>
-            <th>เลข Log</th>
-            <th>เลข Batch</th>
+            <th>รหัสการจัดเก็บ</th>
+            <th>เลขที่ Batch</th>
+            <th>สูตร</th>
             <th>จำนวณ Batch (กก)</th>
             <th>ชื่อวัตถุดิบ</th>
             <th>จำนวณที่ใช้ (กก.)</th>
@@ -50,6 +51,7 @@
             <tr key={index}>
               <td>{item.logId}</td>
               <td>{item.batchId}</td>
+              <td>{item.batchRecipe}</td>
               <td>{item.batchAmount}</td>
               <td>{item.materialName}</td>
               <td>{item.usedAmount}</td>
