@@ -12,7 +12,7 @@
         const loadData = async()=>{
           try{
               const data = await getAllLogs();
-              if(data && data.length > 0){
+              if(data.length > 0){
                 setLogs(data);
                 setLoading(false)
               }else{
@@ -39,6 +39,7 @@
           <tr>
             <th>เลข Log</th>
             <th>เลข Batch</th>
+            <th>จำนวณ Batch (กก)</th>
             <th>ชื่อวัตถุดิบ</th>
             <th>จำนวณที่ใช้ (กก.)</th>
             <th>วันที่</th>
@@ -49,6 +50,7 @@
             <tr key={index}>
               <td>{item.logId}</td>
               <td>{item.batchId}</td>
+              <td>{item.batchAmount}</td>
               <td>{item.materialName}</td>
               <td>{item.usedAmount}</td>
               <td>{item.date}</td>

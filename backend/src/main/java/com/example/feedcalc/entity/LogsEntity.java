@@ -21,6 +21,8 @@ public class LogsEntity {
     private int logId;
     @Column(name= "BATCH_ID")
     private String batchId;
+    @Column(name= "BATCH_AMOUNT")
+    private BigDecimal batchAmount;
     @Column(name="MATERIAL_NAME")
     private String materialName;
     @Column(name="USED_AMOUNT")

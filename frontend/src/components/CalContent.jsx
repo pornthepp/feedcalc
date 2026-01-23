@@ -94,8 +94,8 @@ export default function CalContent(){
             return;
         }
         else{
-            await handleManufacture(manufLog);
-            //console.warn(manufLog);
+            await handleManufacture(manufLog,inputAmount);
+            console.warn(manufLog);
             console.warn("Saved to log");
             setInputAmount(0);
             setIsOpen(false);

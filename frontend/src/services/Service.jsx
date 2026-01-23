@@ -163,7 +163,7 @@ export const getBatchId = ()=>{
 }
 
 //ส่งข้อมูลไปให้ Production Controller
-export const handleManufacture = async(logs)=>{
+export const handleManufacture = async(logs,inputAmount)=>{
   try { 
         const currentBatch = getBatchId();
         const requestMaterials= logs.map(item=>({
@@ -172,6 +172,7 @@ export const handleManufacture = async(logs)=>{
         }));
         const requestLogs= logs.map(item=>({
             batchId : currentBatch,
+            batchAmount : inputAmount,
             materialName: item.materialName,
             usedAmount: item.materialUse
         }));
