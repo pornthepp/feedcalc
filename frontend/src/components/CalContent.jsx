@@ -6,6 +6,8 @@ import { useState,useEffect, cache } from "react";
 import DetailsTable from "./DetailsTable.jsx";
 import UniversalButton from "./UniversalButton.jsx";
 import UniversalModal from "./UniversalModal.jsx";
+import LoadingScreen from "./LoadingScreen.jsx";
+
 
 export default function CalContent(){
     const [recipes,setRecipe]=useState([]);
@@ -21,8 +23,9 @@ export default function CalContent(){
     //modal
     const [isOpen,setIsOpen] = useState(false);
     const [modalType,setModalType] = useState("");
+    const [loading,setLoading]= useState(true);
+
     //modal-confirm
-    
     const openConfirm = ()=>{
         setModalType("CONFIRM");
         setIsOpen(true);
@@ -37,13 +40,18 @@ export default function CalContent(){
         const loadData = async()=>{
             try{
                 const data = await getCalRatio(selectedRecipes,inputAmount);
-                const logdata = data.map(item =>({
-                    materialId:item.materialId,
-                    materialName:item.materialName,
-                    materialUse:item.materialUse,
-                    materialStock:item.materialStock
-                }));
-                setManufLog(logdata);
+                if(data && data.length > 0){
+                    const logdata = data.map(item =>({
+                        materialId:item.materialId,
+                        materialName:item.materialName,
+                        materialUse:item.materialUse,
+                        materialStock:item.materialStock
+                    }));
+                    setLoading(false);
+                    setManufLog(logdata);
+                }else{
+                    console.warn("ยังไม่มีข้อมูล หรือเชื่อมต่อไม่ได้");
+                }
             }catch (error){
                 console.log("error loadData");
                 setManufLog([]);
@@ -53,26 +61,23 @@ export default function CalContent(){
     },[inputAmount,selectedRecipes]
     )
 
-
-    
     //console.log({recipeName}?.recipeName)
     useEffect(()=> {
         const loadData = async()=>{
             try{
-                const [data,min,totalPrice,materials] = await Promise.all([getAllRecipe(),minManufacture(selectedRecipes),getTotalPrice(selectedRecipes,inputAmount),getAllMaterial]);  // <= เรียก fn
+                const [data,min,totalPrice,materials] = await Promise.all([getAllRecipe(),minManufacture(selectedRecipes),getTotalPrice(selectedRecipes,inputAmount),getAllMaterial()]);  // <= เรียก fn
                 //setState
                 setTotalPrice(totalPrice);
                 setRecipe(data);
                 setMinManuf(min);
             }catch (error){
                 console.log("error loadData");
-                setTotalPrice([]);
+                setTotalPrice(0);
                 setRecipe([]);
-                setMinManuf([]);
-                
+                setMinManuf(0);
             }
         };
-        loadData(); //<= เรียก fn loadData ที่เขียนไว้ด้านบน
+        loadData(); 
     },[selectedRecipes,inputAmount]); 
 
     //ผลิตและอัพเดทไปยัง log
@@ -95,12 +100,10 @@ export default function CalContent(){
             setInputAmount(0);
             setIsOpen(false);
         }
-
     }
-
-
     return(
         <div className="container">
+            <LoadingScreen isLoading={loading}/>
             <div className="title-container">
                 <div className='title-wrap'>
                     <h1 className='title-head'>คำนวณวัตถุดิบ (Calculate)</h1>

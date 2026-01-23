@@ -18,9 +18,10 @@ export default function DetailsTable(props ) {
       if (!recipeId) return;
       try{
           const data = await getCalRatio(recipeId,processAmount);
-          setCalRatio(data);
+          setCalRatio(data|| []);
       }catch (error) {
         console.error("Error loading data:", error);
+        setCalRatio([]);
       }
     };
   loadData();

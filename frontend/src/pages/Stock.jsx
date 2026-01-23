@@ -24,6 +24,7 @@ export default function Stock() {
     //modal
     const [isOpen,setIsOpen] = useState(false);
     const [modalType,setModalType] = useState("");
+    const [loading,setLoading]= useState(true);
     //modal-confirm
     
     const openAddModal = ()=>{
@@ -62,11 +63,13 @@ export default function Stock() {
                 const left = await getMaterialById(selectMaterial.id);
                 setLeftMaterial(left.materialStock);
                 setPriceNow(left.materialPrice);
+                setLoading(false)
             } else {
                 setLeftMaterial(0);
                 setPriceNow(0);
             }
         } catch (error) {
+            
             console.error("Error loading data:", error);
         }
     };
@@ -149,7 +152,6 @@ export default function Stock() {
         }
     }
     
-    
         // updateValue?updateMaterialStock(updateId,updateValue):
         // updateMaterialPrice(updateId,updatePrice),closePopup(false),setShowMessage(true)
   return (
@@ -162,7 +164,6 @@ export default function Stock() {
                     <UniversalButton onClick={openEditModal} type={"cancel"}buttonLabel={"แก้ไขวัตถุดิบ"}/>
                 </div>
 
-                {/*Modal*/ }
                 
     
                 <UniversalModal shaker ={shaker} onCancel={handleCancel} onConfirm={modalType === "add" ? addMaterialStock : updateMaterial} 
