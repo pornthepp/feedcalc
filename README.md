@@ -3,7 +3,7 @@
 ### Pig Feed Formula Calculator (Mini-Project)
 เว็บแอปพลิเคชันสำหรับคำนวณสัดส่วนวัตถุดิบและต้นทุนในการผลิตอาหารหมู พร้อมระบบจัดการสต็อกวัตถุดิบอัตโนมัติ
 
-https://feedcalc.netlify.app/
+เยี่ยมชมเว็ป -> https://feedcalc.netlify.app/
 
 ## Tech Stack
 
